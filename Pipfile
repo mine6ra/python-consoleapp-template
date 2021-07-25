@@ -6,6 +6,7 @@ verify_ssl = true
 [dev-packages]
 flake8 = "*"
 black = "*"
+isort = "*"
 
 [packages]
 
@@ -14,7 +15,7 @@ python_version = "3.8"
 
 [scripts]
 lint = "flake8 src"
-format = "black src"
+format = "sh -c 'black src && isort src'"
 
 [pipenv]
 # blackの安定版が提供されていないため
