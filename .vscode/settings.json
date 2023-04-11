@@ -7,5 +7,15 @@
         "editor.codeActionsOnSave": {
             "source.organizeImports": true
         }
+    },
+    // emeraldwalk.runonsave is required.
+    "emeraldwalk.runonsave": {
+        "commands": [
+            {
+                "match": "\\.py$",
+                "isAsync": true,
+                "cmd": "pipenv run format"
+            },
+        ]
     }
 }
