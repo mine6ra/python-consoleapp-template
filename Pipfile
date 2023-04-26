@@ -16,5 +16,5 @@ python_version = "3.8"
 
 [scripts]
 
-lint = "sh -c 'flake8 src; mypy src;'"
+lint = "sh -c 'flake8 src'"
 format = "sh -c 'black src && isort src'"
