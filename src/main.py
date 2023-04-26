@@ -1,4 +1,4 @@
-# import os
+import os
 import sys
 
 version = sys.version_info
