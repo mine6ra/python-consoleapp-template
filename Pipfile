@@ -9,10 +9,12 @@ black = "*"
 isort = "*"
 
 [packages]
+mypy = "*"
 
 [requires]
 python_version = "3.8"
 
 [scripts]
-lint = "flake8 src"
+
+lint = "sh -c 'flake8 src; mypy src;'"
 format = "sh -c 'black src && isort src'"

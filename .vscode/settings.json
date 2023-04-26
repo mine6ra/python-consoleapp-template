@@ -2,12 +2,15 @@
     "python.pythonPath": ".venv/bin/python",
     "python.linting.enabled": true,
     "python.linting.flake8Enabled": true,
-    "python.formatting.provider": "black",
+    "python.linting.mypyEnabled": true,
     "editor.formatOnSave": true,
+    "python.formatting.provider": "black",
     "[python]": {
+        // 明示的にnullを設定しないと editor.formatOnSave が効かない
         "editor.defaultFormatter": null,
         "editor.codeActionsOnSave": {
             "source.organizeImports": true
         }
-    }
+    },
+    // "python.analysis.typeCheckingMode": "strict",
 }
