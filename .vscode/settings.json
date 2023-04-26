@@ -3,19 +3,11 @@
     "python.linting.enabled": true,
     "python.linting.flake8Enabled": true,
     "python.formatting.provider": "black",
+    "editor.formatOnSave": true,
     "[python]": {
+        "editor.defaultFormatter": null,
         "editor.codeActionsOnSave": {
             "source.organizeImports": true
         }
-    },
-    // emeraldwalk.runonsave is required.
-    "emeraldwalk.runonsave": {
-        "commands": [
-            {
-                "match": "\\.py$",
-                "isAsync": true,
-                "cmd": "pipenv run format"
-            },
-        ]
     }
 }
