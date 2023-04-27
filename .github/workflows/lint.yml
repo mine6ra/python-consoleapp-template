@@ -1,13 +1,10 @@
-name: Pylint
+name: Lint
 
 on: [push]
 
 jobs:
-  build:
+  lint:
     runs-on: ubuntu-latest
-    # strategy:
-    #   matrix:
-    #     python-version: ["3.8"]
     steps:
       - uses: actions/checkout@v3
       - name: Set up Python
@@ -21,5 +18,4 @@ jobs:
           pipenv sync --dev
       - name: Analysing the code
         run: |
-          pipenv run mypy src
-          pipenv run flake8 src
+          pipenv run lint
