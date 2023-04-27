@@ -15,6 +15,5 @@ mypy = "*"
 python_version = "3.8"
 
 [scripts]
-# lintは
 lint = "sh -c 'flake8 src && mypy src'"
 format = "sh -c 'black src && isort src'"
